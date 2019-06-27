@@ -2,7 +2,7 @@ package pubsub
 
 import (
 	shell "github.com/ipfs/go-ipfs-api"
-	pubsub "github.com/keks/go-orbitdb/pubsub"
+	pubsub "github.com/zacharyestep/go-orbitdb/pubsub"
 )
 
 var sh *shell.Shell = shell.NewShell("http://localhost:5001")

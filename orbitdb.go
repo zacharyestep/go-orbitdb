@@ -5,9 +5,9 @@ import (
 	"github.com/keks/go-ipfs-colog"
 
 	db "github.com/keks/go-ipfs-colog/immutabledb/ipfs-api"
-	"github.com/keks/go-orbitdb/handler"
-	"github.com/keks/go-orbitdb/pubsub"
-	ippubsub "github.com/keks/go-orbitdb/pubsub/ipfs-api"
+	"github.com/zacharyestep/go-orbitdb/handler"
+	"github.com/zacharyestep/go-orbitdb/pubsub"
+	ippubsub "github.com/zacharyestep/go-orbitdb/pubsub/ipfs-api"
 
 	"log"
 	"os"

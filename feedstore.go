@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/keks/go-ipfs-colog"
-	"github.com/keks/go-orbitdb/handler"
+	"github.com/zacharyestep/go-orbitdb/handler"
 )
 
 // ErrMalformedEntry is returned when a colog Entry does not have the expected

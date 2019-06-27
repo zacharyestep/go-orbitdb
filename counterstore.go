@@ -4,7 +4,7 @@ import (
 	"sync"
 
 	"github.com/keks/go-ipfs-colog"
-	"github.com/keks/go-orbitdb/handler"
+	"github.com/zacharyestep/go-orbitdb/handler"
 )
 
 type ctrPayload struct {

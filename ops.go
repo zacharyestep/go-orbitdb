@@ -1,7 +1,7 @@
 package orbitdb
 
 import (
-	"github.com/keks/go-orbitdb/handler"
+	"github.com/zacharyestep/go-orbitdb/handler"
 )
 
 const (
