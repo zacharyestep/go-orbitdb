@@ -3,6 +3,7 @@ package pubsub
 import (
 	shell "github.com/ipfs/go-ipfs-api"
 	pubsub "github.com/zacharyestep/go-orbitdb/pubsub"
+  "github.com/libp2p/go-libp2p-peer"
 )
 
 var sh *shell.Shell = shell.NewShell("http://localhost:5001")
@@ -11,8 +12,35 @@ type Subscription struct {
 	sub *shell.PubSubSubscription
 }
 
+/*type Record interface {
+				   From() peer.ID
+					      Data() []byte
+				}
+				
+			// Message is a pubsub message.
+			type Message struct {
+								From     peer.ID
+									Data     []byte
+										Seqno    []byte
+											TopicIDs []string
+							}
+				*/
+
+type RecordFromMessage struct   {
+			msg * shell.Message
+}
+
+func (rm RecordFromMessage) From() peer.ID {
+				return rm.msg.From
+}
+
+func (rm RecordFromMessage) Data() []byte {
+				return rm.msg.Data
+}
+
 func (s *Subscription) Next() (pubsub.Record, error) {
-	return s.sub.Next()
+				m, e := s.sub.Next()
+				return RecordFromMessage{m},e
 }
 
 func (s *Subscription) Cancel() error {
